@@ -1,14 +1,15 @@
-<!doctype html>  
-<head>  
-   <!-- Includes for ADL's xAPI Wrapper -->  
-   <!-- Download the files from: -->  
-   <!-- https://github.com/adlnet/xAPIWrapper -->  
-   <script type="text/javascript" src="./js/cryptojs_v3.1.2.js"></script>  
-    <script type="text/javascript" src="./js/xapiwrapper.min.js"></script>  
-    <!------------------------------------->      
-      
-    <script>  
-    function send_statement(){  
+<!doctype html>
+
+<head>
+    <!-- Includes for ADL's xAPI Wrapper -->
+    <!-- Download the files from: -->
+    <!-- https://github.com/adlnet/xAPIWrapper -->
+    <script type="text/javascript" src="./cryptojs_v3.1.2.js"></script>
+    <script type="text/javascript" src="./xapiwrapper.min.js"></script>
+    <!------------------------------------->
+
+    <script>
+        function send_statement(){  
         var conf = {  
              "endpoint" : "https://trial-lrs.yetanalytics.io/xapi",  
              "auth" : "Basic " + toBase64("f51fdcdc5e6410022573785d118e322f:70d10c1e200598baf70452ab35441d4c")  
@@ -40,11 +41,12 @@
         // Dispatch the statement to the LRS  
         var result = ADL.XAPIWrapper.sendStatement(statement);  
         }  
-    </script>  
-  
-</head>  
-  
-<body>  
-    <button type="button" onclick="send_statement()">Send Statements</button>  
-</body>  
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick="send_statement()">Send Statements</button>
+</body>
+
 </html>
